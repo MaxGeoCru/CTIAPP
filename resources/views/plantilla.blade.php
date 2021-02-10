@@ -23,24 +23,16 @@
     <link href=" {{ asset('template/plugins/switchery/switchery.min.css') }} " rel="stylesheet" />
 
     <!-- Font Awesome CSS -->
-    <link href="{{ asset('template/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet"
-        type="text/css" />
+    <link href="{{ asset('template/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- Custom CSS -->
     <link href="{{ asset('template/css/style.css') }}" rel="stylesheet" type="text/css" />
 
-
-
     <!-- BEGIN CSS for this page -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
 
-
-
     <!-- Togle Swicht CHECKBOX CSS for this page -->
     <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
-
-
-
 
 
     <!-- BEGIN CSS for this page -->
@@ -49,9 +41,6 @@
     <script src="{{ asset('template/js/modernizr.min.js') }}"></script>
     <script src="{{ asset('template/js/jquery.min.js') }}"></script>
     <script src="{{ asset('template/js/moment.min.js') }}"></script>
-
-
-
 
 
 </head>
@@ -172,6 +161,10 @@
     </div>
     <!-- END main -->
 
+  <script src="{{ asset('template/js/modernizr.min.js') }}"></script>
+  <script src="{{ asset('template/js/jquery.min.js') }}"></script>
+  <script src="{{ asset('template/js/moment.min.js') }}"></script>
+
   <script src="{{ asset('template/js/popper.min.js') }}"></script>
   <script src="{{ asset('template/js/bootstrap.min.js') }}"></script>
 
@@ -179,7 +172,7 @@
   <script src="{{ asset('template/js/fastclick.js') }}"></script>
   <script src="{{ asset('template/js/jquery.blockUI.js') }}"></script>
   <script src="{{ asset('template/js/jquery.nicescroll.js') }}"></script>
-  <script src="{{ asset('templategi/js/jquery.scrollTo.min.js') }}"></script>
+  <script src="{{ asset('template/js/jquery.scrollTo.min.js') }}"></script>
 
   <!-- <script src="{{ asset('assets/js/jquery-1.10.2.min.js') }}"></script> -->
   <script src="{{ asset('template/js/jquery-ui.min.js') }}"></script>
@@ -209,20 +202,13 @@
   <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
 
   <!-- Counter-Up-->
-  <script
-      src="{{ asset('template/plugins/waypoints/lib/jquery.waypoints.min.js') }} ">
-  </script>
-  <script src="{{ asset('template/plugins/counterup/jquery.counterup.min.js') }} ">
-  </script>
-  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js">
-  </script>
+  <script src="{{ asset('template/plugins/waypoints/lib/jquery.waypoints.min.js') }} "> </script>
+  <script src="{{ asset('template/plugins/counterup/jquery.counterup.min.js') }} ">  </script>
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"> </script>
 
   <!-- DatePickers-->
-  <script src="{{ asset('template/plugins/datetimepicker/js/moment.min.js') }}">
-  </script>
-  <script
-      src="{{ asset('template/plugins/datetimepicker/js/daterangepicker.js') }}">
-  </script>
+  <script src="{{ asset('template/plugins/datetimepicker/js/moment.min.js') }}"> </script>
+  <script src="{{ asset('template/plugins/datetimepicker/js/daterangepicker.js') }}"> </script>
 
   <!-- SwetAlerts-->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

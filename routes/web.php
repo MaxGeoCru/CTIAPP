@@ -14,8 +14,13 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/inicio', 'pageController@inicio')->name('inicio');
 Route::get('/perfil', 'pageController@perfil')->name('perfil');
+Route::get('/equipos', 'pageController@equipos')->name('equipos');
+Route::get('/marcas', 'pageController@marcas')->name('marcas');
+
+Route::post('/RegistrarMarca', 'marcaController@RegistrarMarca')->name('RegistrarMarca');
+Route::get('/RegistrarMarca', 'marcaController@RegistrarMarca');
 

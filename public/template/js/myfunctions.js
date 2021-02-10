@@ -39,7 +39,7 @@ $('#area_id').change(function () {
 });
 
 /************************************************************************************
-* Guardar Cita
+* Guardar Marca
 *************************************************************************************/
 $("#btnGuardarReserva").click(function () {
 
@@ -449,79 +449,52 @@ $("#btnGuardarSolicitud").click(function () {
 /************************************************************************************
 * Guardar Pefil
 *************************************************************************************/
-$("#btnGuardarPerfil2").click(function () {
+$("#btnGuardarMarca").click(function () {
 
     var ArrayInputs = [
-        '#paci_nombres',
-        '#paci_apellidos',
-        '#paci_docidentidad',
-        '#paci_direccion',
-        '#paci_telefono',
-        '#paci_email',
+        '#marc_nombre',
     ];
 
-     var ResultadoValidacion = ValidarVista(ArrayInputs);
+    var ResultadoValidacion = ValidarVista(ArrayInputs);
 
     if (ResultadoValidacion != false && ResultadoValidacion == true) {
 
-    var paci_id = 1;
-    var paci_nombres = $('#paci_nombres').val()
-    var paci_apellidos = $('#paci_apellidos').val()
-    var paci_docidentidad = $('#paci_docidentidad').val();
-    var paci_direccion = $('#paci_direccion').val();
-    var paci_fechanacimiento = $('#paci_fechanacimiento').val();
-    var paci_paisTelefono = 51
-    var paci_telefono = $('#paci_telefono').val();
-    var paci_email = $('#paci_email').val();
-    var usua_id = 1;
+        var marc_nombre = $('#marc_nombre').val()
+        var tipo_idEquipo = $("#tipo_idEquipo option:selected").val();
+        var marc_equipoNombre = $("#tipo_idEquipo option:selected").text();
 
-    //console.log(cita_fecha);
-        //alert(cita_fecha);
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: "POST",
+                url: '/RegistrarMarca',
+                data: {
 
-        swal({
-            title: "¿Estas seguro?",
-            text: "Se va a proceder a actualizar sus datos",
-            icon: "info",
-            buttons: true,
-            dangerMode: false,
-          })
-          .then((willConfirm) => {
-            if (willConfirm) {
-                $correo = willConfirm;
-                //console.log($correo);
-                $.ajax({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    type: "POST",
-                    url: '/RegistrarPaciente',
-                    data: {
-                        'paci_nombres': paci_nombres,
-                        'paci_apellidos': paci_apellidos,
-                        'paci_docidentidad': paci_docidentidad,
-                        'paci_direccion': paci_direccion,
-                        'paci_fechanacimiento': paci_fechanacimiento,
-                        'paci_paisTelefono': paci_paisTelefono,
-                        'paci_telefono': paci_telefono,
-                        'paci_email': paci_email,
-                        'usua_id': usua_id,
-                    },
+                    'tipo_idEquipo': tipo_idEquipo,
+                    'marc_equipoNombre': marc_equipoNombre,
+                    'marc_nombre': marc_nombre,
+                },
 
-                    success: function (data) {
-                        //alert("success");
-                        swal("Listo! Su cita ha sido reservada", {
+                success: function (data) {
+
+                    if (data == true){
+                        swal("Registrado con exito", {
                             icon: "success",
-                          });
-                    },
-                    error: function (data) {
 
-                        swal("Uy!", "Creo que algo salio mal, vuelve a intentar", "error");
-                    },
-                });
-            } else {
-                swal("Oops", "Parece que no estas listo", "error");
-            }
-          });
+                          }).then(function() {
+                            //alert(data);
+                            window.location.href = "/inicio";
+                            });
+                    }else{
+                        swal("Oops!", "Ocurrio un problema", "error");
+                    }
+                },
+                error: function (data) {
+                    alert(data);
+                    //swal("Uy!", "Creo que algo salio mal, vuelve a intentar", "error");
+                },
+            });
     }
 
 });
