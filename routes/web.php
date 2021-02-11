@@ -24,3 +24,8 @@ Route::get('/marcas', 'pageController@marcas')->name('marcas');
 Route::post('/RegistrarMarca', 'marcaController@RegistrarMarca')->name('RegistrarMarca');
 Route::get('/RegistrarMarca', 'marcaController@RegistrarMarca');
 
+// Route::post('/ObtenerMarcaId', 'marcaController@ObtenerMarcaPorIdEquipo')->name('ObtenerMarcaId');
+// Route::get('/ObtenerMarcaId', 'marcaController@ObtenerMarcaPorIdEquipo');
+
+/*--RUTAS AJAX RAPIDAS--*/
+Route::match(['get', 'post'], '/ObtenerMarcaId/{tipo_idEquipo?}', 'marcaController@ObtenerMarcaPorIdEquipo')->name('ObtenerMarcaId');

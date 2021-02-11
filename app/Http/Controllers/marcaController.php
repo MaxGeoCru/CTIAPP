@@ -43,4 +43,11 @@ class marcaController extends Controller
             return response()->json($ResultadoTranssacion) ;
 
     }
+
+    public function ObtenerMarcaPorIdEquipo($tipo_idEquipo){
+
+        $marcas = DB::table('marcas')->where('marc_id', $tipo_idEquipo)->get();
+        return response()->json($marcas);
+
+    }
 }

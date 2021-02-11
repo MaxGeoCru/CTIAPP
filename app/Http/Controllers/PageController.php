@@ -36,8 +36,8 @@ class PageController extends Controller
         /*SIEMPRE DEVOLVER PARA OBTENER DATOS ESPECIFICOS DEL MENU */
 
         //$areas = DB::table('areas')->get();
-        //$empresas = DB::table('empresas')->get();
-        return view('equipos',compact('menu','menupadre'));
+        $tipoEquipos = DB::table('tipo_equipos')->get();
+        return view('equipos',compact('menu','menupadre','tipoEquipos'));
 
 
     }

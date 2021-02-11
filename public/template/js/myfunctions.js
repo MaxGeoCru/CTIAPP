@@ -39,7 +39,7 @@ $('#area_id').change(function () {
 });
 
 /************************************************************************************
-* Guardar Marca
+* Guardar AS
 *************************************************************************************/
 $("#btnGuardarReserva").click(function () {
 
@@ -447,7 +447,7 @@ $("#btnGuardarSolicitud").click(function () {
 });
 
 /************************************************************************************
-* Guardar Pefil
+* Guardar Marca --> marcas.blade.php
 *************************************************************************************/
 $("#btnGuardarMarca").click(function () {
 
@@ -495,6 +495,26 @@ $("#btnGuardarMarca").click(function () {
                     //swal("Uy!", "Creo que algo salio mal, vuelve a intentar", "error");
                 },
             });
+    }
+
+});
+
+/************************************************************************************
+* Guardar Equipo --> equipos.blade.php
+*************************************************************************************/
+$("#btnGuardarEquipo").click(function () {
+
+    var ArrayInputs = [
+        '#equi_serie',
+        '#equi_modelo',
+        '#equi_color',
+    ];
+
+    var ResultadoValidacion = ValidarVista(ArrayInputs);
+
+    if (ResultadoValidacion != false && ResultadoValidacion == true) {
+
+
     }
 
 });
