@@ -567,6 +567,43 @@ $("#btnGuardarEquipo").click(function () {
 
 });
 
+/************************************************************************************
+* Guardar Area --> areas.blade.php
+*************************************************************************************/
+$("#btnGuardarArea").click(function () {
+
+    var ArrayInputs = [
+        '#area_nombre',
+    ];
+
+    var ResultadoValidacion = ValidarVista(ArrayInputs);
+
+    if (ResultadoValidacion != false && ResultadoValidacion == true) {
+
+
+    }
+
+});
+
+/************************************************************************************
+* Guardar Proyecto --> proyectos.blade.php
+*************************************************************************************/
+$("#btnGuardarProyecto").click(function () {
+
+    var ArrayInputs = [
+        '#proy_nombre',
+    ];
+
+    var ResultadoValidacion = ValidarVista(ArrayInputs);
+
+    if (ResultadoValidacion != false && ResultadoValidacion == true) {
+
+
+    }
+
+});
+
+
 
 /************************************************************************************
 * Funcion para validar campos vacios en alguna vista

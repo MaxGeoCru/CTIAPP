@@ -43,5 +43,31 @@ class MenusTableDataSeeder extends Seeder
             'updated_at' => Carbon::now()
         ]);
 
+        /* NEW ROW  */
+        DB::table('menus')->insert([
+            'menu_nombre' => 'Areas',
+            'menu_descripcion' => 'Areas o unidades funcionales',
+            'menu_padre' => '1',
+            'menu_icono' => 'fa fa-fw fa-book',
+            'menu_espadre' => '0',
+            'menu_nombreformulario' => 'areas',
+            'usua_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        /* NEW ROW  */
+        DB::table('menus')->insert([
+            'menu_nombre' => 'Proyectos',
+            'menu_descripcion' => 'Proyectos',
+            'menu_padre' => '1',
+            'menu_icono' => 'fa fa-fw fa-truck',
+            'menu_espadre' => '0',
+            'menu_nombreformulario' => 'proyectos',
+            'usua_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
     }
 }

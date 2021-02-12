@@ -53,5 +53,29 @@ class PageController extends Controller
         return view('marcas',compact('menu','menupadre','tipoEquipos'));
     }
 
+    public function areas()
+    {
+        /*SIEMPRE DEVOLVER PARA OBTENER DATOS ESPECIFICOS DEL MENU */
+        $menu = DB::table('menus')->where('menu_nombreformulario', 'areas')->first();
+        $menupadre = DB::table('menus')->where('menu_id', $menu->menu_padre)->first();
+        /*SIEMPRE DEVOLVER PARA OBTENER DATOS ESPECIFICOS DEL MENU */
+
+
+        return view('areas',compact('menu','menupadre'));
+    }
+
+
+    public function proyectos()
+    {
+        /*SIEMPRE DEVOLVER PARA OBTENER DATOS ESPECIFICOS DEL MENU */
+        $menu = DB::table('menus')->where('menu_nombreformulario', 'proyectos')->first();
+        $menupadre = DB::table('menus')->where('menu_id', $menu->menu_padre)->first();
+        /*SIEMPRE DEVOLVER PARA OBTENER DATOS ESPECIFICOS DEL MENU */
+
+
+        return view('proyectos',compact('menu','menupadre'));
+    }
+
+
 
 }

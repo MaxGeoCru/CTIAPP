@@ -20,17 +20,22 @@ Route::get('/inicio', 'pageController@inicio')->name('inicio');
 Route::get('/perfil', 'pageController@perfil')->name('perfil');
 Route::get('/equipos', 'pageController@equipos')->name('equipos');
 Route::get('/marcas', 'pageController@marcas')->name('marcas');
+Route::get('/areas', 'pageController@areas')->name('areas');
+Route::get('/proyectos', 'pageController@proyectos')->name('proyectos');
 
 Route::post('/RegistrarMarca', 'marcaController@RegistrarMarca')->name('RegistrarMarca');
 Route::get('/RegistrarMarca', 'marcaController@RegistrarMarca');
 
-
 Route::post('/RegistrarEquipo', 'equipoController@RegistrarEquipo')->name('RegistrarEquipo');
 Route::get('/RegistrarEquipo', 'equipoController@RegistrarEquipo');
 
+// Route::post('/RegistrarArea', 'areaController@RegistrarArea')->name('RegistrarArea');
+// Route::get('/RegistrarArea', 'areaController@RegistrarArea');
 
-// Route::post('/ObtenerMarcaId', 'marcaController@ObtenerMarcaPorIdEquipo')->name('ObtenerMarcaId');
-// Route::get('/ObtenerMarcaId', 'marcaController@ObtenerMarcaPorIdEquipo');
+// Route::post('/RegistrarProyecto', 'proyectoController@RegistrarProyecto')->name('RegistrarProyecto');
+// Route::get('/RegistrarProyecto', 'proyectoController@RegistrarProyecto');
+
+
 
 /*--RUTAS AJAX RAPIDAS--*/
 Route::match(['get', 'post'], '/ObtenerMarcaId/{tipo_idEquipo?}', 'marcaController@ObtenerMarcaPorIdEquipo')->name('ObtenerMarcaId');
