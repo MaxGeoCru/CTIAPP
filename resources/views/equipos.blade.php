@@ -81,12 +81,12 @@
                                         <label for="inputPassword3" class="col-sm-3 col-form-label">Estado</label>
                                         <div class="col-sm-3">
                                             <label class="form-check-label">
-											    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>Activo
+											    <input class="form-check-input" type="radio" name="gridRadios"  value="ACTIVO" checked>Activo
 										     </label>
                                         </div>
                                         <div class="col-sm-3">
                                             <label class="form-check-label">
-											    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>Inactivo
+											    <input class="form-check-input" type="radio" name="gridRadios" value="INACTIVO" checked>Inactivo
 										    </label>
                                         </div>
                                     </div>

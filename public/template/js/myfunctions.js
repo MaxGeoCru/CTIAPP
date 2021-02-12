@@ -514,7 +514,55 @@ $("#btnGuardarEquipo").click(function () {
 
     if (ResultadoValidacion != false && ResultadoValidacion == true) {
 
+        var tipo_idEquipo = $('#tipo_idEquipo').val()
+        var equi_nombreTipoEquipo = $("#tipo_idEquipo option:selected").text();
+        var equi_serie = $('#equi_serie').val()
+        var marc_id = $('#marc_id').val()
+        var equi_marcaNombre = $("#marc_id option:selected").text();
+        var equi_modelo = $('#equi_modelo').val()
+        var equi_color = $('#equi_color').val()
+        var equi_estado = $("input[name='gridRadios']:checked").val()
+        var equi_comentarios = $('#equi_comentarios').val()
 
+
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: "POST",
+                url: '/RegistrarEquipo',
+                data: {
+
+                    'tipo_idEquipo': tipo_idEquipo,
+                    'equi_nombreTipoEquipo': equi_nombreTipoEquipo,
+                    'equi_serie': equi_serie,
+                    'marc_id': marc_id,
+                    'equi_marcaNombre': equi_marcaNombre,
+                    'equi_modelo': equi_modelo,
+                    'equi_color': equi_color,
+                    'equi_estado': equi_estado,
+                    'equi_comentarios': equi_comentarios,
+                },
+
+                success: function (data) {
+
+                    if (data == true){
+                        swal("Registrado con exito", {
+                            icon: "success",
+
+                          }).then(function() {
+                            //alert(data);
+                            window.location.href = "/inicio";
+                            });
+                    }else{
+                        swal("Oops!", "Ocurrio un problema", "error");
+                    }
+                },
+                error: function (data) {
+                    alert(data);
+                    //swal("Uy!", "Creo que algo salio mal, vuelve a intentar", "error");
+                },
+            });
     }
 
 });

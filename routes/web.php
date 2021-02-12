@@ -24,6 +24,11 @@ Route::get('/marcas', 'pageController@marcas')->name('marcas');
 Route::post('/RegistrarMarca', 'marcaController@RegistrarMarca')->name('RegistrarMarca');
 Route::get('/RegistrarMarca', 'marcaController@RegistrarMarca');
 
+
+Route::post('/RegistrarEquipo', 'equipoController@RegistrarEquipo')->name('RegistrarEquipo');
+Route::get('/RegistrarEquipo', 'equipoController@RegistrarEquipo');
+
+
 // Route::post('/ObtenerMarcaId', 'marcaController@ObtenerMarcaPorIdEquipo')->name('ObtenerMarcaId');
 // Route::get('/ObtenerMarcaId', 'marcaController@ObtenerMarcaPorIdEquipo');
 
