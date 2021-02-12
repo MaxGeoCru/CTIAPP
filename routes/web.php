@@ -14,7 +14,7 @@
 
 Auth::routes();
 
-// Route::get('/', 'HomeController@index')->name('home');
+ Route::get('/', 'pageController@inicio')->name('home');
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/inicio', 'pageController@inicio')->name('inicio');
 Route::get('/perfil', 'pageController@perfil')->name('perfil');
