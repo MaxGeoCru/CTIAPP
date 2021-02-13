@@ -579,7 +579,39 @@ $("#btnGuardarArea").click(function () {
     var ResultadoValidacion = ValidarVista(ArrayInputs);
 
     if (ResultadoValidacion != false && ResultadoValidacion == true) {
+        
+        var area_nombre = $('#area_nombre').val()
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            type: "POST",
+            url: '/RegistrarArea',
+            data: {
 
+                'area_nombre': area_nombre,
+
+            },
+
+            success: function (data) {
+
+                if (data == true){
+                    swal("Registrado con exito", {
+                        icon: "success",
+
+                      }).then(function() {
+                        //alert(data);
+                        window.location.href = "/inicio";
+                        });
+                }else{
+                    swal("Oops!", "Ocurrio un problema", "error");
+                }
+            },
+            error: function (data) {
+                alert(data);
+                //swal("Uy!", "Creo que algo salio mal, vuelve a intentar", "error");
+            },
+        });
 
     }
 
@@ -598,6 +630,43 @@ $("#btnGuardarProyecto").click(function () {
 
     if (ResultadoValidacion != false && ResultadoValidacion == true) {
 
+        var proy_nombre = $('#proy_nombre').val()
+        var proy_estado = $("input[name='proy_estado']:checked").val()
+        var proy_comentarios = $('#proy_comentarios').val()
+
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            type: "POST",
+            url: '/RegistrarProyecto',
+            data: {
+
+                'proy_nombre': proy_nombre,
+                'proy_estado': proy_estado,
+                'proy_comentarios': proy_comentarios,
+
+            },
+
+            success: function (data) {
+
+                if (data == true){
+                    swal("Registrado con exito", {
+                        icon: "success",
+
+                      }).then(function() {
+                        //alert(data);
+                        window.location.href = "/inicio";
+                        });
+                }else{
+                    swal("Oops!", "Ocurrio un problema", "error");
+                }
+            },
+            error: function (data) {
+                alert(data);
+                //swal("Uy!", "Creo que algo salio mal, vuelve a intentar", "error");
+            },
+        });
 
     }
 

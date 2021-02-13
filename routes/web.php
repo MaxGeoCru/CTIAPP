@@ -29,11 +29,11 @@ Route::get('/RegistrarMarca', 'marcaController@RegistrarMarca');
 Route::post('/RegistrarEquipo', 'equipoController@RegistrarEquipo')->name('RegistrarEquipo');
 Route::get('/RegistrarEquipo', 'equipoController@RegistrarEquipo');
 
-// Route::post('/RegistrarArea', 'areaController@RegistrarArea')->name('RegistrarArea');
-// Route::get('/RegistrarArea', 'areaController@RegistrarArea');
+Route::post('/RegistrarArea', 'areaController@RegistrarArea')->name('RegistrarArea');
+Route::get('/RegistrarArea', 'areaController@RegistrarArea');
 
-// Route::post('/RegistrarProyecto', 'proyectoController@RegistrarProyecto')->name('RegistrarProyecto');
-// Route::get('/RegistrarProyecto', 'proyectoController@RegistrarProyecto');
+Route::post('/RegistrarProyecto', 'proyectoController@RegistrarProyecto')->name('RegistrarProyecto');
+Route::get('/RegistrarProyecto', 'proyectoController@RegistrarProyecto');
 
 
 
