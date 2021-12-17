@@ -22,6 +22,7 @@ Route::get('/equipos', 'pageController@equipos')->name('equipos');
 Route::get('/marcas', 'pageController@marcas')->name('marcas');
 Route::get('/areas', 'pageController@areas')->name('areas');
 Route::get('/proyectos', 'pageController@proyectos')->name('proyectos');
+Route::get('/ingresos', 'pageController@ingresos')->name('ingresos');
 
 Route::post('/RegistrarMarca', 'marcaController@RegistrarMarca')->name('RegistrarMarca');
 Route::get('/RegistrarMarca', 'marcaController@RegistrarMarca');

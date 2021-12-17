@@ -76,6 +76,17 @@ class PageController extends Controller
         return view('proyectos',compact('menu','menupadre'));
     }
 
+    public function ingresos()
+    {
+        /*SIEMPRE DEVOLVER PARA OBTENER DATOS ESPECIFICOS DEL MENU */
+        $menu = DB::table('menus')->where('menu_nombreformulario', 'ingresos')->first();
+        $menupadre = DB::table('menus')->where('menu_id', $menu->menu_padre)->first();
+        /*SIEMPRE DEVOLVER PARA OBTENER DATOS ESPECIFICOS DEL MENU */
+
+
+        return view('ingresos',compact('menu','menupadre'));
+    }
+
 
 
 }

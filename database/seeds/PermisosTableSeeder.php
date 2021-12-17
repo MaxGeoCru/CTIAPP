@@ -51,5 +51,14 @@ class PermisosTableSeeder extends Seeder
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
+
+         /* NEW ROW  */
+         DB::table('permisos')->insert([
+            'menu_id' => 5,
+            'rol_id' => 1,
+            'rol_nombre' => 'admin',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
     }
 }

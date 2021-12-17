@@ -69,5 +69,18 @@ class MenusTableDataSeeder extends Seeder
             'updated_at' => Carbon::now()
         ]);
 
+        /* NEW ROW  */
+        DB::table('menus')->insert([
+            'menu_nombre' => 'Solicitud  Ingreso',
+            'menu_descripcion' => 'Solicitud de nuevo ingreso',
+            'menu_padre' => '1',
+            'menu_icono' => 'fa fa-fw fa-vcard',
+            'menu_espadre' => '0',
+            'menu_nombreformulario' => 'ingresos',
+            'usua_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
     }
 }
