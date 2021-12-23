@@ -34,9 +34,10 @@
     <!-- Togle Swicht CHECKBOX CSS for this page -->
     <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
 
-
+    
     <!-- BEGIN CSS for this page -->
     <link href="{{ asset('template/plugins/datetimepicker/css/daterangepicker.css') }}" rel="stylesheet" />
+    <link href="{{ asset('template/plugins/select2/css/select2.min.css') }}" rel="stylesheet" />    
     <!-- END CSS for this page -->
     <script src="{{ asset('template/js/modernizr.min.js') }}"></script>
     <script src="{{ asset('template/js/jquery.min.js') }}"></script>
@@ -54,7 +55,7 @@
 
             <!-- LOGO -->
             <div class="headerbar-left">
-                <a href="https://centromedicolatino.com/" class="logo"><span>C. Medico Latino</span></a>
+                <a href="https://centromedicolatino.com/" class="logo"><img alt="logo" src="{{ asset('template/images/logo.png') }}" /> <span>CTI APP</span></a>
             </div>
 
             <nav class="navbar-custom">
@@ -200,6 +201,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
   <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+
+  <!-- SELECT 2 -->  
+  <script src="{{ asset('template/plugins/select2/js/select2.min.js') }} "> </script>
 
   <!-- Counter-Up-->
   <script src="{{ asset('template/plugins/waypoints/lib/jquery.waypoints.min.js') }} "> </script>
