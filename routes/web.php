@@ -10,7 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
+use App\Mail\EnvioCorreo;
+use Illuminate\Support\Facades\Mail;
+*/
 
 Auth::routes();
 
@@ -36,7 +39,16 @@ Route::get('/RegistrarArea', 'areaController@RegistrarArea');
 Route::post('/RegistrarProyecto', 'proyectoController@RegistrarProyecto')->name('RegistrarProyecto');
 Route::get('/RegistrarProyecto', 'proyectoController@RegistrarProyecto');
 
+Route::post('/sendMail', 'ingresosController@sendMail')->name('sendMail');
+Route::get('/sendMail', 'ingresosController@sendMail');
+/*
+Route::post('sendMail', function(){
+$correo=new EnvioCorreo;
+Mail::to('kyscompani@gmail.com')->send($correo);
+return "Mensaje enviado";
 
+});
+*/
 
 /*--RUTAS AJAX RAPIDAS--*/
 Route::match(['get', 'post'], '/ObtenerMarcaId/{tipo_idEquipo?}', 'marcaController@ObtenerMarcaPorIdEquipo')->name('ObtenerMarcaId');

@@ -643,7 +643,7 @@ $("#btnGuardarProyecto").click(function () {
             data: {
 
                 'proy_nombre': proy_nombre,
-                'proy_estado': proy_estado,
+                'proy_estado': proy_estado  ,
                 'proy_comentarios': proy_comentarios,
 
             },
@@ -678,6 +678,183 @@ $("#btnGuardarProyecto").click(function () {
 
 // CODIGO CORRESPONDIENTE AQUI
 
+$("#btnRegistrarIngreso").click(function () {
+
+    var ArrayInputs = [
+        '#ingr_email',
+        '#ingr_nombre',
+        '#ingr_segundonombre',
+        '#ingr_apepat',
+        '#ingr_apemat',
+        '#ingr_dni',
+
+        '#ingr_compania',
+        '#ingr_fecha',
+        '#ingr_area',
+        '#ingr_puesto',
+
+        '#ingr_ccorporativo',
+        '#ingr_anexo',
+        '#ingr_carpetas',
+        '#ingr_remplazo',
+        '#ingr_heredar',
+
+
+        '#ingr_dynamics',
+/*
+        '#ingr_adryan',
+        '#ingr_mviaticos',
+        '#ingr_mcapacitacion',
+        '#ingr_mevaluacion',
+        '#ingr_mconformidades',
+        '#ingr_rpts',
+        '#ingr_compradora',
+*/
+    ];
+
+    var ResultadoValidacion = ValidarVista(ArrayInputs);      
+
+    if (ResultadoValidacion != false && ResultadoValidacion == true) {
+
+        var ingr_email = $('#ingr_email').val();
+        var ingr_nombre = $('#ingr_nombre').val();
+        var ingr_segundonombre = $('#ingr_segundonombre').val();
+        var ingr_apepat = $('#ingr_apepat').val();
+        var ingr_apemat = $('#ingr_apemat').val();
+        var ingr_dni = $('#ingr_dni').val();
+
+
+        var ingr_compania = $("#ingr_compania option:selected").text();
+        var ingr_fecha = $("#ingr_fecha").val();
+        var ingr_area = $('#ingr_area').val();
+        var ingr_puesto = $('#ingr_puesto').val();
+
+
+        var ingr_ccorporativo = $('#ingr_ccorporativo').attr('checked')?"SI":"NO";
+        var ingr_anexo =  $('#ingr_anexo').prop('checked')?"SI":"NO";
+        var ingr_carpetas = $('#ingr_carpetas').prop('checked')?"SI":"NO";
+        var ingr_remplazo = $('#ingr_remplazo').val();
+        var ingr_heredar =  $('#ingr_heredar').prop('checked')?"SI":"NO";
+       
+        var ingr_dynamics=concatenar('ingr_dynamics');
+        var ingr_adryan=concatenar('ingr_adryan');       
+        var ingr_mviaticos = $('#ingr_mviaticos').prop('checked')?"SI":"NO";
+        var ingr_mcapacitacion = $('#ingr_mcapacitacion').prop('checked')?"SI":"NO";
+        var ingr_mevaluacion = $('#ingr_mevaluacion').prop('checked')?"SI":"NO";
+        var ingr_mconformidades = $('#ingr_mconformidades').prop('checked')?"SI":"NO";
+        var ingr_rpts = $('#ingr_rpts').prop('checked')?"SI":"NO";
+        var ingr_compradora = $('#ingr_compradora').prop('checked')?"SI":"NO";
+        var ingr_correo_ingresado="";
+    swal({
+        text: 'Ingrese correo example@correo.com',
+        content: "input",
+        button: {
+            text: "Guardar",
+            closeModal: false,
+        },
+        })
+        .then((response) => {
+        if (response) {
+            swal(response, {
+            icon: "success",
+            });
+            
+            ingr_correo_ingresado=response;
+            console.log(validarEmail(ingr_correo_ingresado));
+
+            if (validarEmail(ingr_correo_ingresado)=="true") {
+          
+            
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: "POST",
+                url: '/sendMail',
+                data: {
+                    'ingr_email': ingr_email,
+                    'ingr_nombre': ingr_nombre,
+                    'ingr_segundonombre': ingr_segundonombre,
+                    'ingr_apepat': ingr_apepat,
+                    'ingr_apemat': ingr_apemat,
+                    'ingr_dni': ingr_dni,
+
+                    'ingr_compania': ingr_compania,
+                    'ingr_fecha': ingr_fecha,
+                    'ingr_area': ingr_area,
+                    'ingr_puesto': ingr_puesto,
+                    
+
+                    
+                    'ingr_ccorporativo': ingr_ccorporativo,
+                    'ingr_anexo': ingr_anexo,
+                    'ingr_carpetas': ingr_carpetas,
+                    'ingr_remplazo': ingr_remplazo,
+                    'ingr_heredar': ingr_heredar,
+
+                  
+                    'ingr_dynamics': ingr_dynamics,
+                    'ingr_adryan': ingr_adryan,
+                    'ingr_mviaticos': ingr_mviaticos,
+                    'ingr_mcapacitacion': ingr_mcapacitacion,
+                    'ingr_mevaluacion': ingr_mevaluacion,
+                    'ingr_mconformidades': ingr_mconformidades,
+                    'ingr_rpts': ingr_rpts,
+                    'ingr_compradora': ingr_compradora,
+                    'ingr_correo_ingresado': ingr_correo_ingresado,
+                    
+                },
+
+                success: function (data) {
+                /*
+                    //alert(ingr_email);
+                    
+                    if (data == true){
+                        swal("Registrado con exito", {
+                            icon: "success",
+
+                          }).then(function() {
+                            //alert(data);
+                            window.location.href = "/inicio";
+                            });
+                    }else{
+                        swal("Oops!", "Ocurrio un problema", "error");
+                    }
+                    */
+                },
+                error: function (data) {
+                    alert(data);
+                    //swal("Uy!", "Creo que algo salio mal, vuelve a intentar", "error");
+                },
+            });
+        }else{
+            swal("Formato no valido!", "Email no valido", "error");
+
+        }
+            
+        } else {
+            swal("Your imaginary file is safe!");
+        }
+        });
+    }
+
+});
+function concatenar(id){
+    var reponse="";
+        $('#'+id+' :selected').each(function(){
+            reponse=reponse+$(this).text()+"*";
+            });
+    return reponse;
+}
+
+function validarEmail(valor) {
+    re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+	if(!re.exec(valor)){
+		return "false";
+	}
+        return "true";
+	
+  }
 
 /************************************************************************************
 * Funcion para validar campos vacios en alguna vista

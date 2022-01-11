@@ -107,7 +107,7 @@
                                     <label for="tipo_idEquipo" class="col-sm-4 col-form-label">Compañia</label>
                                     <div class="col-sm-8">
                                         <select class="form-control form-control-sm" name="ingr_compania" id="ingr_compania">                                            
-                                            <option value="0">-- SELECCIONE -- </option>
+                                            <option value="">-- SELECCIONE -- </option>
                                             <option value="GEODRILL SAC">GEODRILL SAC</option>
                                             <option value="CRUBHER SRL">CRUBHER SRL</option>
                                             <option value="CRUBHER INC">CRUBHER INC</option>
