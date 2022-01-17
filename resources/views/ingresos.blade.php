@@ -294,6 +294,16 @@
                                         <input type="checkbox" data-toggle="toggle" data-on="SI" data-off="NO" data-onstyle="success" data-offstyle="danger" data-size="sm" name="ingr_compradora" id="ingr_compradora"> 
                                     </div>
                                 </div>
+
+                                <div class="form-group row" id="GRPingr_remplazo">
+                                    <label for="ingr_remplazo" class="col-sm-4 col-form-label">Observaciones / Comentarios </label>
+                                    <div class="col-sm-8">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        <div class="invalid-feedback">
+                                            Ingrese un dato valido
+                                        </div>
+                                    </div>
+                                </div>
                                 
                                
 

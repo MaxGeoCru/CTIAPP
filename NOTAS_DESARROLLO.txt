@@ -1,0 +1,17 @@
+=========================================================================
+Fecha Nota: 17/01/2022
+Tipo Nota: Observaciones y correcciones
+*************************************************************************
+MENU: solicitud de ingreso
+- El campo segundo nombre no es obligatorio
+- Agregar validaciones y envio del campo Observaciones y comentarios
+- En el HTML del correo todos los datos estaticos deben estar en negrita
+- Se debe restructurar la tabla para ocupar todo el ancho de la pantalla (ESTETICO)
+- En la alerta de correo el nombre correcto del primer campo es Email Personal (no "profesional")
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=25
+MAIL_USERNAME=geobackupmail@gmail.com
+MAIL_PASSWORD=Geodrill$2020
+MAIL_ENCRYPTION=tls
