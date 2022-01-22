@@ -46,7 +46,8 @@ class ingresosController extends Controller
             'ingr_mevaluacion' => $dataJQ['ingr_mevaluacion'],
             'ingr_mconformidades' => $dataJQ['ingr_mconformidades'],
             'ingr_rpts' => $dataJQ['ingr_rpts'],
-            'ingr_compradora' => $dataJQ['ingr_compradora']
+            'ingr_compradora' => $dataJQ['ingr_compradora'],
+            'equi_comentarios'=> $dataJQ['equi_comentarios'],
    
             
 

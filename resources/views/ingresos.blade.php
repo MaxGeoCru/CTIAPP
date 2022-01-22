@@ -296,9 +296,9 @@
                                 </div>
 
                                 <div class="form-group row" id="GRPingr_remplazo">
-                                    <label for="ingr_remplazo" class="col-sm-4 col-form-label">Observaciones / Comentarios </label>
+                                    <label for="equi_comentarios" class="col-sm-4 col-form-label">Observaciones / Comentarios </label>
                                     <div class="col-sm-8">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <textarea class="form-control" id="equi_comentarios" name="equi_comentarios" rows="3"></textarea>
                                         <div class="invalid-feedback">
                                             Ingrese un dato valido
                                         </div>

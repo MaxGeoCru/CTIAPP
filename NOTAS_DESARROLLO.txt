@@ -13,5 +13,5 @@ MAIL_MAILER=smtp
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=25
 MAIL_USERNAME=geobackupmail@gmail.com
-MAIL_PASSWORD=Geodrill$2020
+MAIL_PASSWORD=Crubher$2022
 MAIL_ENCRYPTION=tls

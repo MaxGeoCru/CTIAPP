@@ -1,135 +1,126 @@
-<!DOCTYPE html>
+
 <html>
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title></title>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
 
 <style type="text/css">
-
-   .table tbody>tr>td.rowbot.rowbot {
-     border-bottom: 2px solid;
-   }
-   .table tbody>tr>td.rowtop.rowtop {
-     border-top: 2px solid;
-   }
-   .table tbody>tr>td.rowleft.rowleft {
-     border-left: 2px solid;
-   }
-   .table tbody>tr>td.rowright.rowright{
-     border-right: 2px solid;
-   }
-
-   table.table-bordered > tbody > tr > td{
-    border:0.5px solid #CECBCA;
-}
-
+    .bd-top {
+        border-top: 2px solid;
+   }  
+     .bd-bot {
+        border-bottom: 2px solid;
+   }  
+     .bd-left {
+        border-left: 2px solid;
+   }  
+     .bd-right {
+        border-right: 2px solid;
+   }  
 </style>
 
 
 </head>
 <body>
 
-<div class="container-fluid">
-   <div class="table-responsive-md">
-   <table class="table-bordered table table-hover" >
-      <tbody>
-         <tr class="col-md-12 ">
-            <td colspan="2" class="col-md-6 rowright rowleft  rowtop text-center table-primary" >DATOS PERSONALES</td>
-            <td colspan="2" class="bd-right rowtop rowright text-center table-primary" >DATOS DE INGRESO</td>
-         </tr>
-         <tr class="col-md-12">
-            <td class="col-md-3 rowleft">EMAIL PROFESIONAL</td>
-            <td class="col-md-3 rowright">{{$datos['ingr_email']}}</td>
-            <td class="col-md-3 ">COMPAÑIA</td>
-            <td class="col-md-3 rowright"></td>
-         </tr>
-         <tr class="col-md-12">
-            <td class="col-md-3 rowleft">PRIMER NOMBRE</td>
-            <td class="col-md-3 rowright"></td>
-            <td class="col-md-3">FECHA INGRESO</td>
-            <td class="col-md-3 rowright"></td>
-         </tr>
-         <tr class="col-md-12">
-            <td class="col-md-3 rowleft">SEGUNDO NOMBRE</td>
-            <td class="col-md-3 rowright"></td>
-            <td class="col-md-3">AREA</td>
-            <td class="col-md-3 rowright"> </td>
-         </tr>
-         <tr class="col-md-12">
-            <td class="col-md-3 rowleft">APELLIDO PATERNO</td>
-            <td class="col-md-3 rowright"></td>
-            <td class="col-md-3">PUESTO</td> 
-            <td class="col-md-3 rowright"></td>
-         </tr>
-         <tr class="col-md-12 ">
-            <td class="col-md-3 rowleft">APELLIDO MATERNO</td>
-            <td class="col-md-3 rowright" ></td>
-            <td class="col-md-3">REMPLAZO DE </td>
-            <td class="col-md-3 rowright "></td>
-         </tr>
-         <tr class="col-md-12 ">
-            <td class="col-md-3 rowleft rowbot">DNI</td>
-            <td class="col-md-3 rowright rowbot"></td>
-            <td colspan="2"  class="col-md-6 rowright rowbot"></td>
-         </tr>
-         <tr  class="col-md-12 rowtop">
-            <td  colspan="4" CLASS="text-center rowright rowleft  table-primary">ACCESOS GERENCIALES </td>
-         </tr>
-         <tr class="col-md-12">
-            <td class="col-md-3 rowleft">CORREO CORPORATIVO</td>
-            <td class="col-md-3"></td>
-            <td colspan="2" class="col-md-6 rowright"></td>
-         </tr>
-         <tr class="col-md-12">
-            <td class="col-md-3 rowleft">ANEXO TELEFONICO</td>
-            <td class="col-md-3"></td>
-            <td colspan="2" class="col-md-6 rowright"></td>
-         </tr>
-         <tr class="col-md-12 ">
-            <td class="col-md-3 rowleft rowbot">CARPETAS RESTRINGIDAS</td>
-            <td class="col-md-3 rowbot"></td>
-            <td colspan="2"  class="col-md-6 rowbot rowright"></td>
-         </tr>
-         <tr class="col-md-12 rowtop">
-            <td  colspan="4" CLASS="text-center rowright rowleft table-primary" >ACCESOS A SISTEMAS DE INFORMACION </td>
-         </tr>
-         <tr class="col-md-12">
-            <td  class="col-md-3 rowleft">DYNAMICS</td>
-            <td colspan="3" class="col-md-9 rowright"></td>
-         </tr>
-         <tr class="col-md-12">
-            <td class="col-md-3 rowleft">ADRIAN</td>
-            <td colspan="3" class="col-md-9 rowright"></td>
-         </tr>
-         <tr class="col-md-12">
-            <td class="col-md-3 rowleft">M.VIATICOS</td>
-            <td class="col-md-3"></td>
-            <td class="col-md-3">M. CAPACITACION</td>
-            <td class="col-md-3 rowright"></td>
-         </tr>
-         <tr class="col-md-12">
-            <td class="col-md-3 rowleft">M.EVALUACION</td>
-            <td class="col-md-3"></td>
-            <td class="col-md-3">M. NO CONFORMIDAD</td>
-            <td class="col-md-3 rowright"></td>
-         </tr>
-         <tr class="col-md-12">
-            <td class="col-md-3 rowleft">RPTS</td>
-            <td class="col-md-3"></td>
-            <td class="col-md-3">COMPRADOR(A)</td>
-            <td class="col-md-3 rowright"></td>
-         </tr>
-         <tr  class="col-md-12">
-              <td  colspan="4" CLASS="text-center rowleft rowright col-md-12" >OBSERVACIONES/NOTAS GENERALES </td>
-         </tr>
-         <tr class="col-md-12 rowbot">
-              <td colspan="4" rowspan="3"  class="col-md-12 rowleft rowbot rowright"><br><br><br></td>
-         </tr>      
-      </tbody>
-   </table>
-   </div>
+<div class="table-responsive-md">
+<table class="table table-hover table-bordered ">
+   <tbody>
+      <tr class="table-primary"  class="col-md-12">
+         <td colspan="2" style="border-right: 2px solid; border-top: 2px solid; border-left: 2px solid;">DATOS PERSONALES</td>
+         <td colspan="2" style="border-right: 2px solid; border-top: 2px solid; border-left: 2px solid;">DATOS DE INGRESO</td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;" class="col-md-3">EMAIL PROFESIONAL</td>
+         <td style="border-right: 2px solid;" class="col-md-3"> </td>
+         <td class="col-md-3">COMPAÑIA</td>
+         <td style="border-right: 2px solid;" scope="row" class="col-md-3"></td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;" class="col-md-3">PRIMER NOMBRE</td>
+         <td style="border-right: 2px solid;" class="col-md-3"></td>
+         <td class="col-md-3">FECHA INGRESO</td>
+         <td style="border-right: 2px solid;" class="col-md-3"></td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;" class="col-md-3">SEGUNDO NOMBRE</td>
+         <td style="border-right: 2px solid;" class="col-md-3"></td>
+         <td class="col-md-3">AREA</td>
+         <td style="border-right: 2px solid;" class="col-md-3"> </td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;" class="col-md-3">APELLIDO PATERNO</td>
+         <td style="border-right: 2px solid;" class="col-md-3"></td>
+         <td class="col-md-3">PUESTO</td> 
+         <td style="border-right: 2px solid;" class="col-md-3"></td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;" class="col-md-3">APELLIDO MATERNO</td>
+         <td style="border-right: 2px solid;" class="col-md-3"></td>
+         <td class="col-md-3">REMPLAZO DE </td>
+         <td style="border-right: 2px solid;" class="col-md-3"></td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid; border-bottom: 2px solid;" class="col-md-3">DNI</td>
+         <td style="border-right: 2px solid; border-bottom: 2px solid;" class="col-md-3"></td>
+         <td colspan="2" style="border-right: 2px solid; border-bottom: 2px solid;" class="col-md-6"></td>
+      </tr>
+      <tr class="table-primary"  class="col-md-12">
+         <td  colspan="4" CLASS="text-center" style="border-right: 2px solid; border-left: 2px solid;"  >ACCESOS GERENCIALES </td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;"  class="col-md-3">CORREO CORPORATIVO</td>
+         <td class="col-md-3"></td>
+         <td colspan="2" style="border-right: 2px solid;"  class="col-md-6"></td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;"  class="col-md-3">ANEXO TELEFONICO</td>
+         <td class="col-md-3"></td>
+         <td colspan="2" style="border-right: 2px solid;"  class="col-md-6"></td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid; border-bottom: 2px solid;"  class="col-md-3">CARPETAS RESTRINGIDAS</td>
+         <td style="border-bottom: 2px solid"  class="col-md-3"></td>
+         <td colspan="2" style="border-bottom: 2px solid; border-right: 2px solid; "  class="col-md-6"></td>
+      </tr>
+      <tr class="table-primary"  class="col-md-12">
+         <td  colspan="4" CLASS="text-center" style="border-right: 2px solid; border-left: 2px solid;">ACCESOS A SISTEMAS DE INFORMACION </td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;"  class="col-md-3">DYNAMICS</td>
+         <td colspan="3" style="border-right: 2px solid;"  class="col-md-9"></td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;"  class="col-md-3">ADRIAN</td>
+         <td colspan="3" style="border-right: 2px solid;"  class="col-md-9"></td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;"  class="col-md-3">M.VIATICOS</td>
+         <td  class="col-md-3"></td>
+         <td  class="col-md-3">M. CAPACITACION</td>
+         <td style="border-right: 2px solid;"  class="col-md-3"></td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;"  class="col-md-3">M.EVALUACION</td>
+         <td  class="col-md-3"></td>
+         <td  class="col-md-3">M. NO CONFORMIDAD</td>
+         <td style="border-right: 2px solid;"  class="col-md-3"></td>
+      </tr>
+      <tr class="col-md-12">
+         <td style="border-left: 2px solid;"  class="col-md-3">RPTS</td>
+         <td  class="col-md-3"></td>
+         <td  class="col-md-3">COMPRADOR(A)</td>
+         <td style="border-right: 2px solid;"  class="col-md-3"></td>
+      </tr>
+      <tr  class="col-md-12">
+           <td  colspan="4" CLASS="text-center" style="border-left: 2px solid; border-right: 2px solid;">OBSERVACIONES Y NOTAS GENERALES </td>
+      </tr>
+      <tr class="col-md-12">
+           <td colspan="4" rowspan="3" style="border-left: 2px solid; border-bottom: 2px solid; border-right: 2px solid;"  class="col-md-12"><br><br><br></td>
+      </tr>      
+   </tbody>
+</table>
 </div>
 </body>
 </html>

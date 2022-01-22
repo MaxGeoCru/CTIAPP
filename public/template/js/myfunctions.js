@@ -683,7 +683,7 @@ $("#btnRegistrarIngreso").click(function () {
     var ArrayInputs = [
         '#ingr_email',
         '#ingr_nombre',
-        '#ingr_segundonombre',
+     //   '#ingr_segundonombre',
         '#ingr_apepat',
         '#ingr_apemat',
         '#ingr_dni',
@@ -701,6 +701,7 @@ $("#btnRegistrarIngreso").click(function () {
 
 
         '#ingr_dynamics',
+        '#equi_comentarios'
 /*
         '#ingr_adryan',
         '#ingr_mviaticos',
@@ -745,8 +746,9 @@ $("#btnRegistrarIngreso").click(function () {
         var ingr_rpts = $('#ingr_rpts').prop('checked')?"SI":"NO";
         var ingr_compradora = $('#ingr_compradora').prop('checked')?"SI":"NO";
         var ingr_correo_ingresado="";
+        var equi_comentarios=$('#equi_comentarios').val();
     swal({
-        text: 'Ingrese correo example@correo.com',
+        text: 'Ingrese correo personal example@correo.com',
         content: "input",
         button: {
             text: "Guardar",
@@ -802,6 +804,7 @@ $("#btnRegistrarIngreso").click(function () {
                     'ingr_rpts': ingr_rpts,
                     'ingr_compradora': ingr_compradora,
                     'ingr_correo_ingresado': ingr_correo_ingresado,
+                    'equi_comentarios':equi_comentarios,
                     
                 },
 
