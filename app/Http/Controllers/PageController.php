@@ -5,7 +5,7 @@ use DB;
 use Log;
 use Illuminate\Http\Request;
 
-class PageController extends Controller
+class pageController extends Controller
 {
 
 
@@ -85,6 +85,17 @@ class PageController extends Controller
 
 
         return view('ingresos',compact('menu','menupadre'));
+    }
+
+    public function usuarios()
+    {
+        /*SIEMPRE DEVOLVER PARA OBTENER DATOS ESPECIFICOS DEL MENU */
+        $menu = DB::table('menus')->where('menu_nombreformulario', 'usuarios')->first();
+        $menupadre = DB::table('menus')->where('menu_id', $menu->menu_padre)->first();
+        /*SIEMPRE DEVOLVER PARA OBTENER DATOS ESPECIFICOS DEL MENU */
+
+
+        return view('usuarios',compact('menu','menupadre'));
     }
 
 

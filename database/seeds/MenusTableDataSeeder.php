@@ -82,5 +82,18 @@ class MenusTableDataSeeder extends Seeder
             'updated_at' => Carbon::now()
         ]);
 
+        /* NEW ROW  */
+        DB::table('menus')->insert([
+            'menu_nombre' => 'Usuarios',
+            'menu_descripcion' => 'Gestion de usuarios',
+            'menu_padre' => '1',
+            'menu_icono' => 'fa fa-fw fa-users',
+            'menu_espadre' => '0',
+            'menu_nombreformulario' => 'usuarios',
+            'usua_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
     }
 }

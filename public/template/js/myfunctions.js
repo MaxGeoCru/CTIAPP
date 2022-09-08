@@ -731,7 +731,7 @@ $("#btnRegistrarIngreso").click(function () {
         var ingr_puesto = $('#ingr_puesto').val();
 
 
-        var ingr_ccorporativo = $('#ingr_ccorporativo').attr('checked')?"SI":"NO";
+        var ingr_ccorporativo = $('#ingr_ccorporativo').prop('checked')?"SI":"NO";
         var ingr_anexo =  $('#ingr_anexo').prop('checked')?"SI":"NO";
         var ingr_carpetas = $('#ingr_carpetas').prop('checked')?"SI":"NO";
         var ingr_remplazo = $('#ingr_remplazo').val();
@@ -748,7 +748,7 @@ $("#btnRegistrarIngreso").click(function () {
         var ingr_correo_ingresado="";
         var equi_comentarios=$('#equi_comentarios').val();
     swal({
-        text: 'Ingrese correo personal example@correo.com',
+        text: 'Ingrese su correo para enviarle una COPIA DE ESTE MENSAJE',
         content: "input",
         button: {
             text: "Guardar",
@@ -759,6 +759,7 @@ $("#btnRegistrarIngreso").click(function () {
         if (response) {
             swal(response, {
             icon: "success",
+            text: "Perfecto! , revisa tu bandeja de correo",
             });
             
             ingr_correo_ingresado=response;

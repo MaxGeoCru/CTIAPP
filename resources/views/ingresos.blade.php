@@ -298,7 +298,7 @@
                                 <div class="form-group row" id="GRPingr_remplazo">
                                     <label for="equi_comentarios" class="col-sm-4 col-form-label">Observaciones / Comentarios </label>
                                     <div class="col-sm-8">
-                                    <textarea class="form-control" id="equi_comentarios" name="equi_comentarios" rows="3"></textarea>
+                                    <textarea class="form-control" id="equi_comentarios" name="equi_comentarios" rows="3"  placeholder="Que tenga los mismos permisos que Juan" ></textarea>
                                         <div class="invalid-feedback">
                                             Ingrese un dato valido
                                         </div>

@@ -8,13 +8,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Centro Medico Latino - Appointment</title>
+    <title>CTI APP</title>
     <meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
     <meta name="author" content="Pike Web Development - https://www.pikephp.com">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('template/images/favicon.ico') }}">
 
     <!-- Bootstrap CSS -->
     <link href="{{ asset('template/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
@@ -55,7 +55,7 @@
 
             <!-- LOGO -->
             <div class="headerbar-left">
-                <a href="https://centromedicolatino.com/" class="logo"><img alt="logo" src="{{ asset('template/images/logo.png') }}" /> <span>CTI APP</span></a>
+                <a href="https://cti.geodrill.biz/" class="logo"><img alt="logo" src="{{ asset('template/images/logo.png') }}" /> <span>CTI APP</span></a>
             </div>
 
             <nav class="navbar-custom">

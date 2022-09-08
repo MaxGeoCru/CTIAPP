@@ -24,12 +24,10 @@
       <!-- end row -->
 
       <div class="alert alert-info" role="alert">
-        <h4 class="alert-heading">Reservation platform CENTRO MÉDICO LATINO</h4>
-        <p>On this platform you can book your medical appointments</p>
+        <h4 class="alert-heading">Plataforma de gestión CTI APP</h4>
+        <p>Gestión general de tecnologías de información</p>
         <div class="button-list">
-
-            <a role="button" href="#" class="btn btn-primary btn-block"><i class="fa fa-credit-card-alt m-r-5"></i> New reservation - Credit card Payment</a>
-            <a role="button" href="#" class="btn btn-primary btn-block"><i class="fa fa-dollar m-r-5"></i> New reservation - Credit card Payment</a>
+            <a role="button" href="{{route('ingresos')}}" class="btn btn-primary"><i class="fa fa-user-plus"></i> Solcitud de nuevo ingreso</a>
         </div>
       </div>
 

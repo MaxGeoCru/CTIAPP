@@ -31,9 +31,10 @@ class MessageEmail extends Mailable
     public function build()
     {
         return $this->markdown('emails.confirmation')
-        ->from($address 
-        = 'correo@test.com', $name = "Example")
-        ->subject('Mensaje informativo')
+        ->from($address = 'NoResponder@geodrill.biz', $name = "CTI APP")
+        //->cc(['max.palli@crubher.com','cti@crubher.com','geannina.duran@crubher.com','cti.helpdesk@crubher.com'])
+        ->cc('administradorcti@crubher.com')
+        ->subject('SOLICITUD DE NUEVO INGRESO DE PERSONAL | ALTA DE USUARIO')
         ->with('datos', $this->datos);
 
     }

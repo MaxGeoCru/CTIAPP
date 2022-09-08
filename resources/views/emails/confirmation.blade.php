@@ -1,6 +1,6 @@
 @component('mail::message')
 @component('mail::table')
-# Introduction
+# Solicitud de ingreso
 <html>
 <head>
    <meta charset="utf-8">
@@ -90,12 +90,12 @@
             <td colspan="2"  class="col-md-6 rowright rowbot"></td>
          </tr>
          <tr  class="col-md-12 rowtop" style="text-align: center;">
-            <td  colspan="4" CLASS="col-md-12 text-center rowright rowleft  table-primary" style="background-color: #b8daff;"><b>ACCESOS GERENCIALES </b></td>
+            <td  colspan="4" CLASS="col-md-12 text-center rowright rowleft  table-primary" style="background-color: #b8daff;"><b>ACCESOS GENERALES </b></td>
          </tr>
          <tr class="col-md-12" style="text-align: center;">
             <td class="col-md-3 rowleft"><b>CORREO CORPORATIVO</b></td>
             <td class="col-md-3">{{$datos['ingr_ccorporativo']}}</td>
-            <td colspan="2" class="col-md-6 rowright"></td>
+            <td colspan="2" class="col-md-6 rowright"><b>SUGERENCIA AUTOMÁTICA:</b> {{$datos['ingr_nombre']}}.{{$datos['ingr_apepat']}}@crubher.com</td>
          </tr>
          <tr class="col-md-12"  style="text-align: center;">
             <td class="col-md-3 rowleft"><b>ANEXO TELEFONICO</b></td>
@@ -115,7 +115,7 @@
             <td colspan="3" class="col-md-9 rowright">{{$datos['ingr_dynamics']}}</td>
          </tr>
          <tr class="col-md-12"  style="text-align: center;">
-            <td class="col-md-3 rowleft"><b>ADRIAN</b></td>
+            <td class="col-md-3 rowleft"><b>ADRYAN</b></td>
             <td colspan="3" class="col-md-9 rowright">{{$datos['ingr_adryan']}}</td>
          </tr>
          <tr class="col-md-12"  style="text-align: center;">
@@ -148,9 +148,6 @@
 </div>
 </body>
 </html>
-@endcomponent
-@component('mail::button', ['url' => ''])
-Button Text
 @endcomponent
 
 Thanks,<br>
