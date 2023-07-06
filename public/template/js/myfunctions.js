@@ -827,8 +827,8 @@ $("#btnRegistrarIngreso").click(function () {
                     */
                 },
                 error: function (data) {
-                    alert(data);
-                    //swal("Uy!", "Creo que algo salio mal, vuelve a intentar", "error");
+                    //alert(data);
+                    swal("Uy!", "Creo que algo salio mal, vuelve a intentar", "error");
                 },
             });
         }else{

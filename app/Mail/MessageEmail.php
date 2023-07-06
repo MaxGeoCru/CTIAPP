@@ -34,7 +34,7 @@ class MessageEmail extends Mailable
         ->from($address = 'NoResponder@geodrill.biz', $name = "CTI APP")
         //->cc(['max.palli@crubher.com','cti@crubher.com','geannina.duran@crubher.com','cti.helpdesk@crubher.com'])
         ->cc('administradorcti@crubher.com')
-        ->subject('SOLICITUD DE NUEVO INGRESO DE PERSONAL | ALTA DE USUARIO')
+        ->subject('SOLICITUD DE NUEVO INGRESO DE PERSONAL | ALTA DE USUARIO | TEST')
         ->with('datos', $this->datos);
 
     }

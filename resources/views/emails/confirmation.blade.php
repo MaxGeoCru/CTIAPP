@@ -95,7 +95,7 @@
          <tr class="col-md-12" style="text-align: center;">
             <td class="col-md-3 rowleft"><b>CORREO CORPORATIVO</b></td>
             <td class="col-md-3">{{$datos['ingr_ccorporativo']}}</td>
-            <td colspan="2" class="col-md-6 rowright"><b>SUGERENCIA AUTOMÁTICA:</b> {{$datos['ingr_nombre']}}.{{$datos['ingr_apepat']}}@crubher.com</td>
+            <td colspan="2" class="col-md-6 rowright"><b>SUGERENCIA AUTOMÁTICA:</b> {{ strtolower($datos['ingr_nombre'])}}.{{ strtolower($datos['ingr_apepat'])}}@crubher.com</td>
          </tr>
          <tr class="col-md-12"  style="text-align: center;">
             <td class="col-md-3 rowleft"><b>ANEXO TELEFONICO</b></td>
